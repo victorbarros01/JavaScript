@@ -83,12 +83,3 @@ if (divisao == 2) {
 } else {
   console.log("Seu número não é primo");
 }
-
-// Exercicio 11 - variaveis
-
-let a = 10;
-let b = 5;
-
-const c = a + b;
-
-console.log(c);
