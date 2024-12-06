@@ -151,3 +151,185 @@ console.log(carrinho);
 carrinho.removerItem(2);
 
 console.log(carrinho);
+
+// Exercicio 03
+
+class Endereco {
+  constructor(rua, bairro, cidade, estado) {
+    this._rua = rua;
+    this._bairro = bairro;
+    this._cidade = cidade;
+    this._estado = estado;
+  }
+
+  novaRua(rua) {
+    if (rua !== this._rua) {
+      this._rua = rua;
+    }
+  }
+
+  novoBairro(bairro) {
+    if (bairro !== this._bairro) {
+      this._rua = bairro;
+    }
+  }
+
+  novaCidade(cidade) {
+    if (cidade !== this._cidade) {
+      this._cidade = cidade;
+    }
+  }
+
+  novoEstado(estado) {
+    if (estado !== this._estado) {
+      this._estado = estado;
+    }
+  }
+}
+
+let cliente = new Endereco(
+  "Av, Denise cristina rocha",
+  "Guadalajara",
+  "Ribeirão das Neves",
+  "Minas Gerais"
+);
+
+console.log(cliente);
+
+cliente.novaRua("Rua, João Paulo");
+
+console.log(cliente);
+
+// Exercicio 04
+
+class Carro {
+  constructor(marca, cor, galosinaRest) {
+    this._marca = marca;
+    this._cor = cor;
+    this._gasolinaRest = galosinaRest;
+  }
+
+  dirigir(km) {
+    for (let i = 0; i < km; i += 10) {
+      this._gasolinaRest--;
+
+      if (this._gasolinaRest < 20) {
+        console.log("Você entrou na reserva");
+      }
+
+      if (this._gasolinaRest < 5) {
+        console.log("Seu tanque está vazio");
+        break;
+      }
+    }
+  }
+
+  abastecer(litros) {
+    let limite = this._gasolinaRest + litros;
+    if (this._galosinaRest >= 100) {
+      console.log("Seu tanque está cheio");
+    } else {
+      if (litros > 100 || limite > 100) {
+        this._gasolinaRest = 100;
+      } else {
+        this._gasolinaRest += litros;
+      }
+    }
+  }
+}
+
+let carro = new Carro("Ford", "Azul", 80);
+
+carro.dirigir(100);
+
+console.log(carro);
+
+carro.abastecer(40);
+
+console.log(carro);
+
+carro.abastecer(70);
+
+console.log(carro);
+
+// Exercicio 05
+
+class ContaBancaria {
+  constructor(saldoCorrente, saldoPoupanca = 0, jurosPoupanca = 0.03) {
+    this._saldoCorrente = saldoCorrente;
+    this._saldoPoupanca = saldoPoupanca;
+    this._jurosPoupanca = jurosPoupanca;
+  }
+
+  saque(qnt) {
+    if (this._saldoCorrente > 0) {
+      this._saldoCorrente -= qnt;
+    } else {
+      console.log("Saldo insuficiente");
+    }
+  }
+
+  depositar(qnt) {
+    if (qnt > 0) {
+      this._saldoCorrente += qnt;
+    }
+  }
+
+  contaPoupanca() {
+    if (this._saldoPoupanca > 0) {
+      return (this._saldoPoupanca += 10 - this._jurosPoupanca);
+    } else {
+      return;
+    }
+  }
+
+  transfPoupanca(qnt) {
+    if (this._saldoCorrente > 10) {
+      this._jurosPoupanca += qnt;
+      this._saldoCorrente -= qnt;
+    } else {
+      console.log(
+        "Só é possivel transferir para a poupança à partir de R$10.00"
+      );
+    }
+  }
+
+  transfCorrente(qnt) {
+    if (this._jurosPoupanca > 0) {
+      this._jurosPoupanca -= qnt;
+      this._saldoCorrente += qnt;
+    } else {
+      console.log(
+        "Só é possivel transferir para a corrente após a transferência para a poupança"
+      );
+    }
+  }
+}
+
+let conta = new ContaBancaria(1000, 0);
+
+class ContaEspecial extends ContaBancaria {
+  constructor(saldoCorrente, saldoPoupanca) {
+    super(saldoCorrente, saldoPoupanca);
+    this._jurosPoupanca += this._jurosPoupanca * 2;
+  }
+}
+
+let contaEspecial = new ContaEspecial(2000, 2);
+
+//console.log(contaEspecial);
+
+//setInterval(conta.contaPoupanca(), 1000);
+
+setInterval(console.log(conta), 1000);
+
+let data = new Date();
+
+const span = document.createElement("span");
+document.body.appendChild(span);
+let time = data.toLocaleTimeString();
+setInterval(tempo, 1000);
+function tempo() {
+  let data = new Date();
+  span.innerHTML = data.toLocaleTimeString();
+}
