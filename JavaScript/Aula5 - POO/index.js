@@ -317,12 +317,6 @@ class ContaEspecial extends ContaBancaria {
 
 let contaEspecial = new ContaEspecial(2000, 2);
 
-//console.log(contaEspecial);
-
-//setInterval(conta.contaPoupanca(), 1000);
-
-setInterval(console.log(conta), 1000);
-
 let data = new Date();
 
 const span = document.createElement("span");
@@ -331,5 +325,6 @@ let time = data.toLocaleTimeString();
 setInterval(tempo, 1000);
 function tempo() {
   let data = new Date();
+
   span.innerHTML = data.toLocaleTimeString();
 }
