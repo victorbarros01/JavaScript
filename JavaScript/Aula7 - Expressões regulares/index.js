@@ -30,3 +30,12 @@ const ipRegex = new RegExp(
 console.log(ipRegex);
 
 console.log(ipRegex.test("192.168.0.255"));
+
+// Exercicio 05 -
+
+// const verificarUsuario = /\b(\w|\w[_]|\w[-]){3,16}\b/;
+const verificarUsuario = /^(?=.{3,16}$)[a-z0-9-_]/;
+
+console.log(verificarUsuario.test("user_name"));
+
+console.log(verificarUsuario.test("UsuarioAsasd___1234"));
