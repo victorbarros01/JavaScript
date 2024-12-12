@@ -15,3 +15,8 @@
 <li><a href="JavaScript/Aula7 - Expressões regulares/ResumoRegex.md">Regex</a>
 <li><a href="JavaScript/Aula8 - Programação Assíncrona/ResumeProgramacaoAsync.md">Programação Assíncrona</a>
 <ul>
+
+<br>
+<br>
+
+<img href="JavaScript/GoodStudies.gif">
