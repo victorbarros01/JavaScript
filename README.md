@@ -19,4 +19,4 @@
 <br>
 <br>
 
-<img scr="https://github.com/victorbarros01/JavaScript/blob/d6dc0401ab61390598113518331075b302ee1cdc/JavaScript/GoodStudies.gif">
+<img src="https://github.com/victorbarros01/JavaScript/blob/d6dc0401ab61390598113518331075b302ee1cdc/JavaScript/GoodStudies.gif">
