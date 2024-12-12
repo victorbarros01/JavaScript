@@ -20,4 +20,4 @@
 <br>
 <br>
 
-<img height="300px" width="500px" border-radius="10px" border="2px solid white" src="https://github.com/victorbarros01/JavaScript/blob/d6dc0401ab61390598113518331075b302ee1cdc/JavaScript/GoodStudies.gif">
+<img height="300px" width="500px" src="https://github.com/victorbarros01/JavaScript/blob/d6dc0401ab61390598113518331075b302ee1cdc/JavaScript/GoodStudies.gif">
