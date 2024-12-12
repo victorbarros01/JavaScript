@@ -39,7 +39,7 @@ const regex = /\d+/g;
 console.log("123 abc 456".match(regex)); // Saída: ['123', '456']
 ```
 
-[Mais sobre](!https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions)
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions">Mais sobre!</a>
 
 ## Operador \b
 
