@@ -18,5 +18,6 @@
 
 <br>
 <br>
+<br>
 
-<img src="https://github.com/victorbarros01/JavaScript/blob/d6dc0401ab61390598113518331075b302ee1cdc/JavaScript/GoodStudies.gif">
+<img height="500px" width="300" src="https://github.com/victorbarros01/JavaScript/blob/d6dc0401ab61390598113518331075b302ee1cdc/JavaScript/GoodStudies.gif">
