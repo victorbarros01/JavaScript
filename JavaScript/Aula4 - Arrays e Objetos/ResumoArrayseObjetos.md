@@ -68,7 +68,7 @@ array.splice(1, 2, "a", "b");
 console.log(array); // Saída: [1, 'a', 'b', 4]
 ```
 
-[Mais sobre](!https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Mais sobre</a>
 
 ## indexOf e lastIndexOf
 
