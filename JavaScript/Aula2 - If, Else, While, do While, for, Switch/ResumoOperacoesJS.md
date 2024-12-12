@@ -138,3 +138,58 @@ switch (fruta) {
     console.log("Fruta desconhecida.");
 }
 ```
+
+## break
+
+**Descrição:**
+
+- Usado para interromper um laço ou um bloco de código imediatamente.
+- Comum em estruturas como for, while ou switch.
+- Após encontrar um break, o fluxo do programa salta para fora do laço ou bloco
+
+**Sintaxe e exemplo:**
+
+_break;_
+
+```javascript
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break; // Interrompe o laço quando i for igual a 5.
+  }
+  console.log("Valor de i é: " + i);
+}
+
+// Saída 0,1,2,3,4
+```
+
+## continue
+
+**Descrição:**
+
+- Usado para pular a iteração atual de um laço e passar para a próxima.
+- Comum em loops como for e while.
+
+**Sintaxe e exemplo:**
+
+_continue;_
+
+```javascript
+for (let i = 0; i < 20; i++) {
+  if (i % 2 === 0) {
+    continue; //Pula todos os números pares
+  }
+
+  console.log("Os ímpares da solução são: " + i);
+}
+
+// Saída 1,3,5,7,9,11,13,15,17,19
+```
+
+<br>
+
+**Bônus**
+
+Principais diferenças entre break e continue.
+
+- break interrompe o laço ou bloco por completo.
+- continue apenas pula a iteração atual e segue para a próxima.
