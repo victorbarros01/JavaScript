@@ -91,3 +91,157 @@ No JavaScript existem algumas formas para se encontrar um elemento que está pre
   </div>
 </body>
 ```
+
+## Alterar o HTML
+
+**Descrição:**
+
+O JavaScript possui alguns métodos com a função de adicionar, remover ou clonar elementos.
+Vamos ver alguns desses recursos:
+
+- `createElement(tag)` : Este método cria um elemento novo, porém, esse elemento ainda não está presente no HTML.
+
+- `offsetWidth/offsetHeight` : Este atributo verifica a largura e altura respectivamente, dos elementos.
+
+- `clientWidth/clientHeight` : Assim como **offsetWidth/offsetHeight** verifica a largura e altura respectivamente dos elementos, mas descosidera as dimensões das **bordas**.
+
+- `getBoundingClientRect()` : Este método verifica as posições de um elemento.
+
+- `createTextNode(text)` : Este método é responsável por criar um novo nó de texto.
+
+- `getAttribute(attribute)` : Este método pega o valor que está presente no atributo de um elemento.
+
+- `setAttribute(attribute, value)` : Este método altera o valor que está presente no atributo de um elemento, caso esse atributo mencionando não exista no elemento ele adiociona como novo atributo.
+
+- `insertBefore(tag, refElement)` : Este método insere um elemento antes do elemento de referência.
+
+- `appendChild(tag)` : Neste método o elemento gerado no JS é adicionado no html, sempre após todos os elementos dentro do elemento pai. Nas suas regras é passado no parâmetro, apenas qual elemento precisa ser adicionado.
+
+- `replaceChild(newTag, oldTag)` : Este método diferente dos anteriore repõe algum elemento do HTML. Como regra no primeiro parâmetro o elemento novo, no segundo parâmetro o antigo elemento que será substituído.
+
+**Exemplos:**
+
+#### createElement
+
+```javascript
+let span = document.createElement("span");
+// Cria um novo elemento.
+
+span.textContent = "Aviso importante!";
+// Altera o texto de span para Aviso importante!.
+
+const titulo = document.getElementById("titulo");
+let paiTitulo = titulo.parentNode;
+
+paiTitulo.appendChild(span);
+```
+
+#### Width/Height
+
+```javascript
+const texto = document.querySelector("p");
+
+console.log(texto.offsetWidth, texto.offsetHeight);
+// Tem como saída as dimensões de largura e altura respectivamente do elemento.
+
+console.log(texto.clientWidth, texto.clientHeight);
+// Tem como saída as dimensões de largura e altura respectivamente do elemento, sem considerar a borda "border".
+```
+
+#### getBoundingClientRect
+
+```javascript
+const texto = document.querySelector("p");
+
+console.log(texto.getBoundingClientRect());
+// Tem como saída todas as informações sobre a posição desse elemento sendo essas: eixos da posição, distâncias das direções(right, left, top, bottom), altura e largura do elemento.
+```
+
+#### createTextNode
+
+```javascript
+let span = document.createElement("span");
+
+const titulo = document.getElementById("titulo");
+let paiTitulo = titulo.parentNode;
+
+paiTitulo.appendChild(span);
+
+let novoTexto = document.createTextNode("Este é o novo texto");
+// Cria um novo nó de texto.
+
+span.appendChild(novoTexto);
+// Insere o nó de texto "novoTexto" no elemento span.
+```
+
+#### get/setAttribute
+
+```javascript
+let a = document.createElement("a");
+
+let titulo = document.getElementById("titulo");
+
+a.textContent = "Novo link";
+
+a.setAttribute("href", "#");
+// Cria um novo atributo para "a" e coloca "#" como valor.
+
+titulo.parentNode.appendChild(a);
+
+a.setAttribute("href", "https://www.google.com");
+// Substitui o valor de href para "https://www.google.com".
+
+console.log(a.getAttribute("href"));
+// Saída: https://www.google.com
+```
+
+#### insertBefore
+
+```javascript
+let a = document.createElement("a");
+
+let titulo = document.getElementById("titulo");
+
+let pai = titulo.parentNode;
+
+a.textContent = "Novo link";
+
+a.setAttribute("href", "#");
+
+pai.insertBefore(a, pai.firstChild);
+// Insere o elemento "a" antes do primeiro elemento de "pai".
+```
+
+#### appendChild
+
+```javascript
+let span = document.createElement("span");
+
+const titulo = document.getElementById("titulo");
+let paiTitulo = titulo.parentNode;
+
+paiTitulo.appendChild(span);
+// Adiciona "span" depois do último elemento de "paiTitulo".
+
+let novoTexto = document.createTextNode("Este é o novo texto");
+
+span.appendChild(novoTexto);
+// Insere o nó de texto "novoTexto" no elemento span.
+```
+
+#### replaceChild
+
+```javascript
+let a = document.createElement("a");
+
+let titulo = document.getElementById("titulo");
+
+let pai = titulo.parentNode;
+
+a.textContent = "Novo link";
+
+a.setAttribute("href", "#");
+
+pai.replaceChild(a, titulo);
+// Substitui o elemento "titulo" para "a";
+```

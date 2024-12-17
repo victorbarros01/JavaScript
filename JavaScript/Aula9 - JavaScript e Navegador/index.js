@@ -4,10 +4,14 @@ console.log(
   document.body.childNodes[3].childNodes[3].childNodes[3].textContent
 );
 
-const a = document.getElementsByClassName("div-group");
+let a = document.createElement("a");
 
-a[1].innerHTML = "Lembrete";
+let titulo = document.getElementById("titulo");
 
-console.log(typeof a);
+let pai = titulo.parentNode;
 
-document.querySelector;
+a.textContent = "Novo link";
+
+a.setAttribute("href", "#");
+
+pai.replaceChild(a, titulo);
