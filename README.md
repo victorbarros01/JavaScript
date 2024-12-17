@@ -15,6 +15,7 @@
 <li><a href="JavaScript/Aula7 - Expressões regulares/ResumoRegex.md">Regex</a>
 <li><a href="JavaScript/Aula8 - Programação Assíncrona/ResumeProgramacaoAsync.md">Programação Assíncrona</a>
 <li><a href="JavaScript/Aula9 - JavaScript e Navegador/ResumoJSDOM.md">JavaScript e o Navegador</a>
+<li><a href="JavaScript/Aula10 - Eventos no JavaScript/ResumoEventsinJS.md">Eventos no JavaScript</a>
 <ul>
 
 <br>
