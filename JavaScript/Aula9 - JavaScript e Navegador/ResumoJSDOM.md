@@ -130,7 +130,7 @@ let span = document.createElement("span");
 span.textContent = "Aviso importante!";
 // Altera o texto de span para Aviso importante!.
 
-const titulo = document.getElementById("titulo");
+let titulo = document.getElementById("titulo");
 let paiTitulo = titulo.parentNode;
 
 paiTitulo.appendChild(span);
@@ -139,7 +139,7 @@ paiTitulo.appendChild(span);
 #### Width/Height
 
 ```javascript
-const texto = document.querySelector("p");
+let texto = document.querySelector("p");
 
 console.log(texto.offsetWidth, texto.offsetHeight);
 // Tem como saída as dimensões de largura e altura respectivamente do elemento.
@@ -151,7 +151,7 @@ console.log(texto.clientWidth, texto.clientHeight);
 #### getBoundingClientRect
 
 ```javascript
-const texto = document.querySelector("p");
+let texto = document.querySelector("p");
 
 console.log(texto.getBoundingClientRect());
 // Tem como saída todas as informações sobre a posição desse elemento sendo essas: eixos da posição, distâncias das direções(right, left, top, bottom), altura e largura do elemento.
@@ -162,7 +162,7 @@ console.log(texto.getBoundingClientRect());
 ```javascript
 let span = document.createElement("span");
 
-const titulo = document.getElementById("titulo");
+let titulo = document.getElementById("titulo");
 let paiTitulo = titulo.parentNode;
 
 paiTitulo.appendChild(span);
@@ -217,7 +217,7 @@ pai.insertBefore(a, pai.firstChild);
 ```javascript
 let span = document.createElement("span");
 
-const titulo = document.getElementById("titulo");
+let titulo = document.getElementById("titulo");
 let paiTitulo = titulo.parentNode;
 
 paiTitulo.appendChild(span);
