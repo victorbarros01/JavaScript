@@ -1,17 +1,17 @@
-console.log(document.body.childNodes);
-console.log(typeof document.body.childNodes[1].childNodes[0]);
-console.log(
-  document.body.childNodes[3].childNodes[3].childNodes[3].textContent
-);
+let btn = document.querySelector("button");
+let div = btn.parentNode;
 
-let a = document.createElement("a");
+btn.addEventListener("click", function (e) {
+  alert("Hello World!");
+  e.stopPropagation();
+});
 
-let titulo = document.getElementById("titulo");
+div.addEventListener("click", function (e) {
+  alert(`Eu sou a ${div}`);
+});
 
-let pai = titulo.parentNode;
-
-a.textContent = "Novo link";
-
-a.setAttribute("href", "#");
-
-pai.replaceChild(a, titulo);
+window.addEventListener("keydown", function (e) {
+  if (e.key == "q") {
+    console.log("apertou a tecla Q");
+  }
+});
